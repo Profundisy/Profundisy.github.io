@@ -1,2 +1,1 @@
-https://www.runyi.ink/2019/04/16/hello-world/
-https://www.runyi.ink/2018/09/11/hexo博客搭建教程/
+https://www.runyi.ink/2018/04/16/hexo博客搭建教程/
