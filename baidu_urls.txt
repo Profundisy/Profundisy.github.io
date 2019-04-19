@@ -1,1 +1,5 @@
 https://www.runyi.ink/2019/04/19/hexo博客搭建教程/
+https://www.runyi.ink/2018/10/16/解决gestyy-com病毒/
+https://www.runyi.ink/2018/09/29/适用于本人的python快速复习资料（整理自learn-x-in-y-minutes/
+https://www.runyi.ink/2018/09/13/小白git教程/
+https://www.runyi.ink/2018/09/13/企业级监控软件Zabbix安装部署/

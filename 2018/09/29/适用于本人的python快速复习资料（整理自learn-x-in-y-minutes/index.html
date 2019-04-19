@@ -1,0 +1,341 @@
+<!DOCTYPE html><html class="theme-next gemini use-motion" lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#222"><script></script><link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"><link rel="stylesheet" href="/css/main.css?v=7.1.0"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.0"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.0"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.0"><link rel="mask-icon" href="/images/logo.svg?v=7.1.0" color="#222"><script id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Gemini",version:"7.1.0",sidebar:{position:"left",display:"post",offset:12,onmobile:!1,dimmer:!1},back2top:!0,back2top_sidebar:!1,fancybox:!1,fastclick:!1,lazyload:!1,tabs:!0,motion:{enable:!0,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},algolia:{applicationID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><meta name="description" content="太基础的东西自己就没有收录进来，本文会随着自己知识的增长而更新####################################################原始数据类型和运算符##################################################### 除法例自动转换成浮点数35 / 5 # =&amp;gt; 7.05 / 3 # =&amp;gt; 1.66666666666666"><meta name="keywords" content="python"><meta property="og:type" content="article"><meta property="og:title" content="适用于本人的python快速复习资料（整理自第三方)"><meta property="og:url" content="https://www.runyi.ink/2018/09/29/适用于本人的python快速复习资料（整理自learn-x-in-y-minutes/index.html"><meta property="og:site_name" content="闰一先生の补录狗"><meta property="og:description" content="太基础的东西自己就没有收录进来，本文会随着自己知识的增长而更新####################################################原始数据类型和运算符##################################################### 除法例自动转换成浮点数35 / 5 # =&amp;gt; 7.05 / 3 # =&amp;gt; 1.66666666666666"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2018-10-11T01:23:04.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="适用于本人的python快速复习资料（整理自第三方)"><meta name="twitter:description" content="太基础的东西自己就没有收录进来，本文会随着自己知识的增长而更新####################################################原始数据类型和运算符##################################################### 除法例自动转换成浮点数35 / 5 # =&amp;gt; 7.05 / 3 # =&amp;gt; 1.66666666666666"><link rel="canonical" href="https://www.runyi.ink/2018/09/29/适用于本人的python快速复习资料（整理自learn-x-in-y-minutes/"><script id="page.configurations">CONFIG.page={sidebar:""}</script><title>适用于本人的python快速复习资料（整理自第三方) | 闰一先生の补录狗</title><noscript><style>.sidebar-inner,.use-motion .brand,.use-motion .collection-title,.use-motion .comments,.use-motion .menu-item,.use-motion .motion-element,.use-motion .pagination,.use-motion .post-block,.use-motion .post-body,.use-motion .post-header{opacity:initial}.use-motion .logo,.use-motion .site-subtitle,.use-motion .site-title{opacity:initial;top:initial}.use-motion .logo-line-before i{left:initial}.use-motion .logo-line-after i{right:initial}</style></noscript></head><body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN"><div class="container sidebar-position-left page-post-detail"><div class="headband"></div><header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">闰一先生の补录狗</span> <span class="logo-line-after"><i></i></span></a></div></div><div class="site-nav-toggle"><button aria-label="切换导航栏"><span class="btn-bar"></span> <span class="btn-bar"></span> <span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i><br>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i><br>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i><br>归档</a></li><li class="menu-item menu-item-search"><a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i><br>搜索</a></li></ul><div class="site-search"><div class="popup search-popup local-search-popup"><div class="local-search-header clearfix"><span class="search-icon"><i class="fa fa-search"></i> </span><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span><div class="local-search-input-wrapper"><input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input"></div></div><div id="local-search-result"></div></div></div></nav></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://www.runyi.ink/2018/09/29/适用于本人的python快速复习资料（整理自learn-x-in-y-minutes/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="闰一先生"><meta itemprop="description" content="有时代码，有时设计"><meta itemprop="image" content="/uploads/avatar.png"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="闰一先生の补录狗"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">适用于本人的python快速复习资料（整理自第三方)</h1><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i> </span><span class="post-meta-item-text">发表于</span> <time title="创建时间：2018-09-29 09:20:15" itemprop="dateCreated datePublished" datetime="2018-09-29T09:20:15+08:00">2018-09-29</time> <span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="fa fa-calendar-check-o"></i> </span><span class="post-meta-item-text">更新于</span> <time title="修改时间：2018-10-11 09:23:04" itemprop="dateModified" datetime="2018-10-11T09:23:04+08:00">2018-10-11</time> </span><span class="post-category"><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习/" itemprop="url" rel="index"><span itemprop="name">学习</span></a></span> </span><span class="post-comments-count"><span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="fa fa-comment-o"></i> </span><span class="post-meta-item-text">评论数：</span> <a href="/2018/09/29/适用于本人的python快速复习资料（整理自learn-x-in-y-minutes/#comments" itemprop="discussionUrl"><span class="post-comments-count valine-comment-count" data-xid="/2018/09/29/适用于本人的python快速复习资料（整理自learn-x-in-y-minutes/" itemprop="commentCount"></span> </a></span><span id="/2018/09/29/适用于本人的python快速复习资料（整理自learn-x-in-y-minutes/" class="leancloud_visitors" data-flag-title="适用于本人的python快速复习资料（整理自第三方)"><span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="fa fa-eye"></i> </span><span class="post-meta-item-text">阅读次数：</span> <span class="leancloud-visitors-count"></span></span></div></header><div class="post-body" itemprop="articleBody"><p>太基础的东西自己就没有收录进来，本文会随着自己知识的增长而更新</p><p>####################################################</p><h4 id="原始数据类型和运算符"><a href="#原始数据类型和运算符" class="headerlink" title="原始数据类型和运算符"></a><font color="FireBrick">原始数据类型和运算符</font></h4><p>####################################################</p><p># 除法例自动转换成浮点数<br>35 / 5 # => 7.0<br>5 / 3 # => 1.6666666666666667</p><p># 整数除法的结果都是向下取整<br>5 // 3 # => 1<br>5.0 // 3.0 # => 1.0 # 浮点数也可以<br>-5 // 3 # => -2<br>-5.0 // 3.0 # => -2.0</p><p># 浮点数的运算结果也是浮点数<br>3 * 2.0 # => 6.0</p><p># 模除（取余）<br>7 % 3 # => 1</p><p># 大小比较可以连起来！<br>1 &lt; 2 &lt; 3 # => True<br>2 &lt; 3 &lt; 2 # => False</p><p># 字符串可以被当作字符列表<br>“This is a string”[0] # => ‘T’</p><p># 用.format来格式化字符串<br>“{} can be {}”.format(“strings”, “interpolated”) # =&gt; “strings can be interpolated”</p><p># 可以重复参数以节省时间<br>“{0} be nimble, {0} be quick, {0} jump over the {1}”.format(“Jack”, “candle stick”)<br># => “Jack be nimble, Jack be quick, Jack jump over the candle stick”</p><p># 如果不想数参数，可以用关键字<br>“{name} wants to eat {food}”.format(name=”Bob”, food=”lasagna”)<br># => “Bob wants to eat lasagna”</p><p># 如果你的Python3程序也要在Python2.5以下环境运行，也可以用老式的格式化语法<br>“%s can be %s the %s way” % (“strings”, “interpolated”, “old”)</p><p># None是一个对象<br>None # => None</p><p># 当与None进行比较时不要用 ==，要用is。is是用来比较两个变量是否指向同一个对象。<br>“etc” is None # => False<br>None is None # => True</p><p>####################################################</p><h4 id="变量和集合"><a href="#变量和集合" class="headerlink" title="变量和集合"></a><font color="FireBrick">变量和集合</font></h4><p>####################################################</p><p># print是内置的打印函数<br>print(“I’m Python. Nice to meet you!”)</p><p># 在给变量赋值前不用提前声明<br># 传统的变量命名是小写，用下划线分隔单词<br>some_var = 5<br>some_var # => 5</p><p># 访问未赋值的变量会抛出异常<br># 参考流程控制一段来学习异常处理<br>some_unknown_var # 抛出NameError</p><p># 用列表(list)储存序列<br>li = []<br># 创建列表时也可以同时赋给元素<br>other_li = [4, 5, 6]</p><p># 用append在列表最后追加元素<br>li.append(1) # li现在是[1]<br>li.append(2) # li现在是[1, 2]<br>li.append(4) # li现在是[1, 2, 4]<br>li.append(3) # li现在是[1, 2, 4, 3]<br># 用pop从列表尾部删除<br>li.pop() # => 3 且li现在是[1, 2, 4]<br># 把3再放回去<br>li.append(3) # li变回[1, 2, 4, 3]</p><p># 列表存取跟数组一样<br>li[0] # => 1<br># 取出最后一个元素<br>li[-1] # => 3</p><p># 越界存取会造成IndexError<br>li[4] # 抛出IndexError</p><p># 列表有切割语法<br>li[1:3] # => [2, 4]<br># 取尾<br>li[2:] # => [4, 3]<br># 取头<br>li[:3] # => [1, 2, 4]<br># 隔一个取一个<br>li[::2] # =&gt;[1, 4]<br># 倒排列表<br>li[::-1] # => [3, 4, 2, 1]<br># 可以用三个参数的任何组合来构建切割<br># li[始:终:步伐]</p><p># 用del删除任何一个元素<br>del li[2] # li is now [1, 2, 3]</p><p># 列表可以相加<br># 注意：li和other_li的值都不变<br>li + other_li # => [1, 2, 3, 4, 5, 6]</p><p># 用extend拼接列表<br>li.extend(other_li) # li现在是[1, 2, 3, 4, 5, 6]</p><p># 用in测试列表是否包含值<br>1 in li # => True</p><p># 用len取列表长度<br>len(li) # => 6</p><p># 元组是不可改变的序列<br>tup = (1, 2, 3)<br>tup[0] # => 1<br>tup[0] = 3 # 抛出TypeError</p><p># 列表允许的操作元组大都可以<br>len(tup) # => 3<br>tup + (4, 5, 6) # => (1, 2, 3, 4, 5, 6)<br>tup[:2] # => (1, 2)<br>2 in tup # => True</p><p># 可以把元组合列表解包，赋值给变量<br>a, b, c = (1, 2, 3) # 现在a是1，b是2，c是3<br># 元组周围的括号是可以省略的<br>d, e, f = 4, 5, 6<br># 交换两个变量的值就这么简单<br>e, d = d, e # 现在d是5，e是4</p><p># 用字典表达映射关系<br>empty_dict = {}<br># 初始化的字典<br>filled_dict = {“one”: 1, “two”: 2, “three”: 3}</p><p># 用[]取值<br>filled_dict[“one”] # => 1</p><p># 用 keys 获得所有的键。<br># 因为 keys 返回一个可迭代对象，所以在这里把结果包在 list 里。我们下面会详细介绍可迭代。<br># 注意：字典键的顺序是不定的，你得到的结果可能和以下不同。<br>list(filled_dict.keys()) # => [“three”, “two”, “one”]</p><p># 用values获得所有的值。跟keys一样，要用list包起来，顺序也可能不同。<br>list(filled_dict.values()) # => [3, 2, 1]</p><p># 用in测试一个字典是否包含一个键<br>“one” in filled_dict # => True<br>1 in filled_dict # => False</p><p># 访问不存在的键会导致KeyError<br>filled_dict[“four”] # KeyError</p><p># 用get来避免KeyError<br>filled_dict.get(“one”) # => 1<br>filled_dict.get(“four”) # => None<br># 当键不存在的时候get方法可以返回默认值<br>filled_dict.get(“one”, 4) # => 1<br>filled_dict.get(“four”, 4) # => 4</p><p># setdefault方法只有当键不存在的时候插入新值<br>filled_dict.setdefault(“five”, 5) # filled_dict[“five”]设为5<br>filled_dict.setdefault(“five”, 6) # filled_dict[“five”]还是5</p><p># 字典赋值<br>filled_dict.update({“four”:4}) # => {“one”: 1, “two”: 2, “three”: 3, “four”: 4}<br>filled_dict[“four”] = 4 # 另一种赋值方法</p><p># 用del删除<br>del filled_dict[“one”] # 从filled_dict中把one删除</p><p># 用set表达集合<br>empty_set = set()<br># 初始化一个集合，语法跟字典相似。<br>some_set = {1, 1, 2, 2, 3, 4} # some_set现在是{1, 2, 3, 4}</p><p># 可以把集合赋值于变量<br>filled_set = some_set</p><p># 为集合添加元素<br>filled_set.add(5) # filled_set现在是{1, 2, 3, 4, 5}</p><p># &amp; 取交集<br>other_set = {3, 4, 5, 6}<br>filled_set &amp; other_set # => {3, 4, 5}</p><p># | 取并集<br>filled_set | other_set # => {1, 2, 3, 4, 5, 6}</p><p># - 取补集<br>{1, 2, 3, 4} - {2, 3, 5} # => {1, 4}</p><p># in 测试集合是否包含元素<br>2 in filled_set # => True<br>10 in filled_set # => False</p><p>####################################################</p><h4 id="流程控制和迭代器"><a href="#流程控制和迭代器" class="headerlink" title="流程控制和迭代器"></a><font color="FireBrick">流程控制和迭代器</font></h4><p>####################################################</p><p># 先随便定义一个变量<br>some_var = 5</p><p># 这是个if语句。注意缩进在Python里是有意义的<br># 印出”some_var比10小”<br>if some_var &gt; 10:<br>​ print(“some_var比10大”)<br>elif some_var &lt; 10: # elif句是可选的<br>​ print(“some_var比10小”)<br>else: # else也是可选的<br>​ print(“some_var就是10”)</p><p>“””<br>用for循环语句遍历列表<br>打印:<br>dog is a mammal<br>cat is a mammal<br>mouse is a mammal<br>“””<br>for animal in [“dog”, “cat”, “mouse”]:<br>​ print(“{} is a mammal”.format(animal))</p><p>“””<br>“range(number)”返回数字列表从0到给的数字<br>打印:<br>0<br>1<br>2<br>3<br>“””<br>for i in range(4):<br>​ print(i)</p><p>“””<br>while循环直到条件不满足<br>打印:<br>0<br>1<br>2<br>3<br>“””<br>x = 0<br>while x &lt; 4:<br>​ print(x)<br>​ x += 1 # x = x + 1 的简写</p><p># 用try/except块处理异常状况<br>try:<br>​ # 用raise抛出异常<br>​ raise IndexError(“This is an index error”)<br>except IndexError as e:<br>​ pass # pass是无操作，但是应该在这里处理错误<br>except (TypeError, NameError):<br>​ pass # 可以同时处理不同类的错误<br>else: # else语句是可选的，必须在所有的except之后<br>​ print(“All good!”) # 只有当try运行完没有错误的时候这句才会运行</p><p># Python提供一个叫做可迭代(iterable)的基本抽象。一个可迭代对象是可以被当作序列<br># 的对象。比如说上面range返回的对象就是可迭代的。</p><p>filled_dict = {“one”: 1, “two”: 2, “three”: 3}<br>our_iterable = filled_dict.keys()<br>print(our_iterable) # => dict_keys([‘one’, ‘two’, ‘three’])，是一个实现可迭代接口的对象</p><p># 可迭代对象可以遍历<br>for i in our_iterable:<br>​ print(i) # 打印 one, two, three</p><p># 但是不可以随机访问<br>our_iterable[1] # 抛出TypeError</p><p># 可迭代对象知道怎么生成迭代器<br>our_iterator = iter(our_iterable)</p><p># 迭代器是一个可以记住遍历的位置的对象<br># 用__next__可以取得下一个元素<br>our_iterator.__next__() # => “one”</p><p># 再一次调取__next__时会记得位置<br>our_iterator.__next__() # => “two”<br>our_iterator.__next__() # => “three”</p><p># 当迭代器所有元素都取出后，会抛出StopIteration<br>our_iterator.__next__() # 抛出StopIteration</p><p># 可以用list一次取出迭代器所有的元素<br>list(filled_dict.keys()) # => Returns [“one”, “two”, “three”]</p><p>####################################################</p><h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a><font color="FireBrick">函数</font></h4><p>####################################################</p><p># 用def定义新函数<br>def add(x, y):<br>​ print(“x is {} and y is {}”.format(x, y))<br>​ return x + y # 用return语句返回</p><p># 调用函数<br>add(5, 6) # => 印出”x is 5 and y is 6”并且返回11</p><p># 也可以用关键字参数来调用函数<br>add(y=6, x=5) # 关键字参数可以用任何顺序</p><p># 我们可以定义一个可变参数函数<br>def varargs(*args):<br>​ return args</p><p>varargs(1, 2, 3) # => (1, 2, 3)</p><p># 我们也可以定义一个关键字可变参数函数<br>def keyword_args(**kwargs):<br>​ return kwargs</p><p># 我们来看看结果是什么：<br>keyword_args(big=”foot”, loch=”ness”) # => {“big”: “foot”, “loch”: “ness”}</p><p># 这两种可变参数可以混着用<br>def all_the_args(*args, **kwargs):<br>​ print(args)<br>​ print(kwargs)<br>“””<br>all_the_args(1, 2, a=3, b=4) prints:<br>(1, 2)<br>{“a”: 3, “b”: 4}<br>“””</p><p># 调用可变参数函数时可以做跟上面相反的，用<em>展开序列，用**展开字典。<br>args = (1, 2, 3, 4)<br>kwargs = {“a”: 3, “b”: 4}<br>all_the_args(</em>args) # 相当于 foo(1, 2, 3, 4)<br>all_the_args(<strong>kwargs) # 相当于 foo(a=3, b=4)<br>all_the_args(*args, </strong>kwargs) # 相当于 foo(1, 2, 3, 4, a=3, b=4)</p><p># 函数作用域<br>x = 5</p><p>def setX(num):<br>​ # 局部作用域的x和全局域的x是不同的<br>​ x = num # => 43<br>​ print (x) # => 43</p><p>def setGlobalX(num):<br>​ global x<br>​ print (x) # => 5<br>​ x = num # 现在全局域的x被赋值<br>​ print (x) # => 6</p><p>setX(43)<br>setGlobalX(6)</p><p># 函数在Python是一等公民<br>def create_adder(x):<br>​ def adder(y):<br>​ return x + y<br>​ return adder</p><p>add_10 = create_adder(10)<br>add_10(3) # => 13</p><p># 也有匿名函数<br>(lambda x: x &gt; 2)(3) # => True</p><p># 内置的高阶函数<br>map(add_10, [1, 2, 3]) # => [11, 12, 13]<br>filter(lambda x: x &gt; 5, [3, 4, 5, 6, 7]) # => [6, 7]</p><p># 用列表推导式可以简化映射和过滤。列表推导式的返回值是另一个列表。<br>[add_10(i) for i in [1, 2, 3]] # => [11, 12, 13]<br>[x for x in [3, 4, 5, 6, 7] if x &gt; 5] # => [6, 7]</p><p>####################################################</p><h4 id="类"><a href="#类" class="headerlink" title="类"></a><font color="FireBrick">类</font></h4><p>####################################################</p><p># 定义一个继承object的类<br>class Human(object):</p><pre><code>\# 类属性，被所有此类的实例共用。
+species = &quot;H. sapiens&quot;
+
+\# 构造方法，当实例被初始化时被调用。注意名字前后的双下划线，这是表明这个属
+\# 性或方法对Python有特殊意义，但是允许用户自行定义。你自己取名时不应该用这
+\# 种格式。
+def \_\_init\_\_(self, name):
+    \# Assign the argument to the instance&apos;s name attribute
+    self.name = name
+
+\# 实例方法，第一个参数总是self，就是这个实例对象
+def say(self, msg):
+    return &quot;{name}: {message}&quot;.format(name=self.name, message=msg)
+
+\# 类方法，被所有此类的实例共用。第一个参数是这个类对象。
+@classmethod
+def get_species(cls):
+    return cls.species
+
+\# 静态方法。调用时没有实例或类的绑定。
+@staticmethod
+def grunt():
+    return &quot;\*grunt\*&quot;
+</code></pre><p># 构造一个实例<br>i = Human(name=”Ian”)<br>print(i.say(“hi”)) # 印出 “Ian: hi”</p><p>j = Human(“Joel”)<br>print(j.say(“hello”)) # 印出 “Joel: hello”</p><p># 调用一个类方法<br>i.get_species() # => “H. sapiens”</p><p># 改一个共用的类属性<br>Human.species = “H. neanderthalensis”<br>i.get_species() # => “H. neanderthalensis”<br>j.get_species() # => “H. neanderthalensis”</p><p># 调用静态方法<br>Human.grunt() # => “*grunt*“</p><p>####################################################</p><h4 id="模块"><a href="#模块" class="headerlink" title="模块"></a><font color="FireBrick">模块</font></h4><p>####################################################</p><p># 用import导入模块<br>import math<br>print(math.sqrt(16)) # => 4.0</p><p># 也可以从模块中导入个别值<br>from math import ceil, floor<br>print(ceil(3.7)) # => 4.0<br>print(floor(3.7)) # => 3.0</p><p># 可以导入一个模块中所有值<br># 警告：不建议这么做<br>from math import *</p><p># 如此缩写模块名字<br>import math as m<br>math.sqrt(16) == m.sqrt(16) # => True</p><p># Python模块其实就是普通的Python文件。你可以自己写，然后导入，<br># 模块的名字就是文件的名字。</p><p># 你可以这样列出一个模块里所有的值<br>import math<br>dir(math)</p><p>####################################################</p><h4 id="高级用法"><a href="#高级用法" class="headerlink" title="高级用法"></a><font color="FireBrick">高级用法</font></h4><p>####################################################</p><p># 用生成器(generators)方便地写惰性运算<br>def double_numbers(iterable):<br>​ for i in iterable:<br>​ yield i + i</p><p># 生成器只有在需要时才计算下一个值。它们每一次循环只生成一个值，而不是把所有的<br># 值全部算好。<br>#<br># range的返回值也是一个生成器，不然一个1到900000000的列表会花很多时间和内存。<br>#<br># 如果你想用一个Python的关键字当作变量名，可以加一个下划线来区分。<br>range_ = range(1, 900000000)<br># 当找到一个 &gt;=30 的结果就会停<br># 这意味着 `double_numbers` 不会生成大于30的数。<br>for i in double_numbers(range_):<br>​ print(i)<br>​ if i &gt;= 30:<br>​ break</p><p># 装饰器(decorators)<br># 这个例子中，beg装饰say<br># beg会先调用say。如果返回的say_please为真，beg会改变返回的字符串。<br>from functools import wraps</p><p>def beg(target_function):<br>​ @wraps(target_function)<br>​ def wrapper(<em>args, **kwargs):<br>​ msg, say_please = target_function(</em>args, **kwargs)<br>​ if say_please:<br>​ return “{} {}”.format(msg, “Please! I am poor :(“)<br>​ return msg</p><pre><code>return wrapper
+</code></pre><p>@beg<br>def say(say_please=False):<br>​ msg = “Can you buy me a beer?”<br>​ return msg, say_please</p><p>print(say()) # Can you buy me a beer?<br>print(say(say_please=True)) # Can you buy me a beer? Please! I am poor :(</p></div><footer class="post-footer"><div class="post-tags"><a href="/tags/python/" rel="tag"># python</a></div><div class="post-nav"><div class="post-nav-next post-nav-item"><a href="/2018/09/13/小白git教程/" rel="next" title="小白git教程"><i class="fa fa-chevron-left"></i> 小白git教程</a></div><span class="post-nav-divider"></span><div class="post-nav-prev post-nav-item"><a href="/2018/10/16/解决gestyy-com病毒/" rel="prev" title="解决gestyy.com病毒">解决gestyy.com病毒 <i class="fa fa-chevron-right"></i></a></div></div></footer></div></article></div></div><div class="comments" id="comments"></div></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span> <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span> <span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">文章目录</li><li class="sidebar-nav-overview" data-target="site-overview-wrap">站点概览</li></ul><div class="site-overview-wrap sidebar-panel"><div class="site-overview"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="site-author-image" itemprop="image" src="/uploads/avatar.png" alt="闰一先生"><p class="site-author-name" itemprop="name">闰一先生</p><div class="site-description motion-element" itemprop="description">有时代码，有时设计</div></div><nav class="site-state motion-element"><div class="site-state-item site-state-posts"><a href="/archives/"><span class="site-state-item-count">5</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"><a href="/categories/"><span class="site-state-item-count">2</span> <span class="site-state-item-name">分类</span></a></div><div class="site-state-item site-state-tags"><a href="/tags/"><span class="site-state-item-count">6</span> <span class="site-state-item-name">标签</span></a></div></nav></div></div><div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active"><div class="post-toc"><div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#原始数据类型和运算符"><span class="nav-number">1.</span> <span class="nav-text">原始数据类型和运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量和集合"><span class="nav-number">2.</span> <span class="nav-text">变量和集合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#流程控制和迭代器"><span class="nav-number">3.</span> <span class="nav-text">流程控制和迭代器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数"><span class="nav-number">4.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类"><span class="nav-number">5.</span> <span class="nav-text">类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块"><span class="nav-number">6.</span> <span class="nav-text">模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#高级用法"><span class="nav-number">7.</span> <span class="nav-text">高级用法</span></a></li></ol></div></div></div></div></aside></div></main><footer id="footer" class="footer"><div class="footer-inner"><div class="copyright">&copy; <span itemprop="copyrightYear">2019</span> <span class="with-love" id="animate"><i class="fa fa-user"></i> </span><span class="author" itemprop="copyrightHolder">闰一先生</span></div><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span> <span class="post-meta-divider">|</span> <span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"></span>人</span></div></footer><div class="back-to-top"><i class="fa fa-arrow-up"></i></div></div><script>"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script><script src="/lib/jquery/index.js?v=2.1.3"></script><script src="/lib/velocity/velocity.min.js?v=1.2.1"></script><script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script><script src="/js/utils.js?v=7.1.0"></script><script src="/js/motion.js?v=7.1.0"></script><script src="/js/affix.js?v=7.1.0"></script><script src="/js/schemes/pisces.js?v=7.1.0"></script><script src="/js/scrollspy.js?v=7.1.0"></script><script src="/js/post-details.js?v=7.1.0"></script><script src="/js/next-boot.js?v=7.1.0"></script><script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><script>var GUEST=["nick","mail","link"],guest="nick,mail,link";guest=guest.split(",").filter(function(e){return-1<GUEST.indexOf(e)}),new Valine({el:"#comments",verify:!1,notify:!1,appId:"D6JFIaFLiCnWAWPoFhfX2DcN-gzGzoHsz",appKey:"BY7J3epTWr09jqRR2A6YJTML",placeholder:"不留点什么再走吗？(･ω´･ )",avatar:"mm",meta:guest,pageSize:"10",visitor:!0,lang:"zh-cn"});var infoEle=document.querySelector("#comments .info");infoEle&&infoEle.childNodes&&0<infoEle.childNodes.length&&infoEle.childNodes.forEach(function(e){e.parentNode.removeChild(e)})</script><script>// Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });</script></body></html>
